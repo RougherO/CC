@@ -32,7 +32,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby-full build-essential zlib1g-dev
-          gem install jekyll bundler
+          sudo gem install jekyll bundler
           bundle init
           echo "gem 'jekyll-relative-links'" >> Gemfile
           bundle install
