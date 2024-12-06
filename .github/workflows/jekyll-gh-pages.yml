@@ -40,7 +40,6 @@ jobs:
           bundler-cache: true # Caches gems for future builds
       - name: Install dependencies
         run: |
-          sudo gem install jekyll-relative-links
           sudo gem install jekyll
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
