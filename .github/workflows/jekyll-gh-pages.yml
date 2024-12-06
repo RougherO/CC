@@ -24,7 +24,12 @@ concurrency:
 jobs:
   # Build job
   build:
+    strategy:
+      matrix:
+        gemfile: [ jekyll-relative-links ]
     runs-on: ubuntu-latest
+    env:
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,9 +39,9 @@ jobs:
           ruby-version: 3.0   # Choose the version you need
           bundler-cache: true # Caches gems for future builds
       - name: Install dependencies
+          # echo "gem 'jekyll-relative-links'" >> Gemfile
         run: |
-          echo "gem 'jekyll-relative-links'" >> Gemfile
-          bundle install --path vendor/bundle
+          bundle install
       - name: Build Jekyll Site
         run: |
           bundle exec jekyll build -d ./_site
