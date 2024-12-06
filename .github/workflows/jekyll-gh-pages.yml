@@ -40,8 +40,7 @@ jobs:
           bundler-cache: true # Caches gems for future builds
       - name: Install dependencies
         run: |
-          echo "gem 'jekyll-relative-links'" >> Gemfile
-          bundle install
+          sudo gem install jekyll-relative-links
       - name: Build Jekyll Site
         run: |
           bundle exec jekyll build -d ./_site
