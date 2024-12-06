@@ -41,21 +41,20 @@ jobs:
       - name: Install dependencies
         run: |
           sudo gem install jekyll
-          sudo gem install jekyll-relative-links
-      - name: Build Jekyll Site
-        run: |
-          jekyll build -d ./_site
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      # - name: Build Jekyll Site
+      #   run: |
+      #     jekyll build -d ./_site
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
-      # - name: Build with Jekyll
-      #   uses: actions/jekyll-build-pages@v1
-      #   with:
-      #     source: ./
-      #     destination: ./_site
 
   # Deployment job
   deploy:
