@@ -40,10 +40,11 @@ jobs:
           bundler-cache: true # Caches gems for future builds
       - name: Install dependencies
         run: |
+          sudo gem install jekyll
           sudo gem install jekyll-relative-links
       - name: Build Jekyll Site
         run: |
-          bundle exec jekyll build -d ./_site
+          jekyll build -d ./_site
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
