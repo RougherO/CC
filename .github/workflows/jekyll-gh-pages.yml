@@ -28,18 +28,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install Jekyll
+      - name: Set up Ruby, Jekyll, and Bundler
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0   # Choose the version you need
+          bundler-cache: true # Caches gems for future builds
+      - name: Install dependencies
         run: |
-          sudo su
-          apt-get update
-          apt-get install -y ruby-full build-essential zlib1g-dev
-          gem install jekyll bundler
-          bundle init
           echo "gem 'jekyll-relative-links'" >> Gemfile
-          bundle install
+          bundle install --path vendor/bundle
       - name: Build Jekyll Site
         run: |
-          sudo bundle exec jekyll build -d ./_site
+          bundle exec jekyll build -d ./_site
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
