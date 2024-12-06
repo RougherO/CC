@@ -28,16 +28,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install Jekyll
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ruby-full build-essential zlib1g-dev
+          gem install jekyll bundler
+          bundle init
+          echo "gem 'jekyll-relative-links'" >> Gemfile
+          bundle install
+      - name: Build Jekyll Site
+        run: |
+          bundle exec jekyll build -d ./_site
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-          theme: jekyll-theme-midnight
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+      # - name: Build with Jekyll
+      #   uses: actions/jekyll-build-pages@v1
+      #   with:
+      #     source: ./
+      #     destination: ./_site
 
   # Deployment job
   deploy:
