@@ -70,3 +70,55 @@ These integrations make S3 a central service for cloud applications, offering sc
 
 - **Retrieval Time for Glacier Storage**: While cost-effective, retrieving data from Glacier or Glacier Deep Archive can take hours, making it less suitable for data requiring quick access.
 - **Cost Management**: While S3 is generally cost-effective, frequent data access and large data transfer can lead to high costs, requiring careful management.
+
+---
+
+#### 6. **What are the various components associated with AWS S3?**
+- **Objects**: The information the user is storing. Amazon S3 allows user to read, write and delete objects containing from 1 byte to 5 TB of data each. The number of objects you can store is unlimited.
+Additionally, you can associate metadata with the object. This consists of System Metadata (Request ID Headers) which are useful for Amazon staff, as well as User Metadata (2KB Max.) such as Date Last Modified and File Size.
+- **Keys**: Files are represented as unique kyes within a bucket. Each object  is stored and retrerived via a unique developer-assigned key. 
+The keys are basically represented as files names (*http://bucket.s3.amazonaws.com/file.txt*).
+- **Buckets**: A container in which objects are placed. Buckets are owned by an AWS account. A bucket can be stored in one of several Regions. You can choose a Region to optimize for latency,minimize costs, or address regulatory
+
+---
+
+#### 7. **What are the various properties assocaited with AWS S3 buckets?**
+- **Versioning**: If enabled, POST/DELETE result in the creation of new versions without destroying the old.
+- **Lifecycle**: Delete or archive objects in a bucket a certain time after creation or last access or number of versions.
+- **Access Policy**: Control when and where objects can be accessed.
+- **Access Control**: Control who may access objects in this bucket.
+- **Logging** Keep track of how objects are accessed.
+- **Notification**: Be notified when failures occur.
+
+--- 
+
+#### 8. **How are operations performed on AWS S3 buckets? What are the different operations that can be performed on AWS S3 buckets?**
+Amazon S3 uses REST and SOAP protocols for messaging, allowing the use oof various development toolkits with S3. You can use either REST or SOAP API to do the following operations:
+- Create a bucket.
+- Write */POST* a new object or update an existing object.
+- Read */GET* an existing object from a bucket.
+- Delete an object from the bucket.
+- List the keys (files) present in a bucket.
+
+Care should be taken not to rapidly create and delete objects in a bucket, as this can lead to performance issues.
+
+
+---
+
+#### 9. **What are the various features associated with AWS S3?**
+- **Lifecycle Management**: Amazon S3's Lifecycle Management automates the process of transitioning objects between different storage classes and expiring them when they are no longer needed.
+    * Transition Rules: Move objects to a more cost-effective storage class (e.g., from S3 Standard to S3 Glacier) based on the age of the objects or the time of their last modification.
+    * Expiration Rules: Automatically delete objects after a specified period to reduce storage costs.
+    * Benefits: Optimize storage costs and reduce manual intervention.
+- **Bucket Policy**: Bucket Policies are JSON-based access control policies associated with Amazon S3 buckets.
+    * Define fine-grained access controls for users, roles, or AWS services.
+    * Enforce HTTPS-only access to the bucket.
+    * Restrict access by IP addresses or VPCs.
+- **Data Protection**: Amazon S3 offers multiple features to protect data:
+    * Server-Side Encryption (SSE): Encrypts data at rest using AWS-managed (SSE-S3, SSE-KMS) or customer-managed keys.
+    * Client-Side Encryption: Data is encrypted before upload.
+    * Versioning: Retain multiple versions of an object to recover from accidental deletions or overwrites.
+- **Access Controls**: Use IAM policies, bucket policies, and ACLs to restrict unauthorized access.
+- **Cross Region Replication**: CRR replicates objects from one bucket to another in a different AWS region automatically. Versioning must be enabled.
+Allows for real-time replication of newly uploaded objects, including metadata and object tags.
+Can replicate unencrypted, encrypted, and versioned objects.
