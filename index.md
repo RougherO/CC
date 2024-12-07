@@ -37,6 +37,7 @@
 - **[Deployment and Management Services]({{ site.baseurl }}{% link Cloud Services and Platforms/Services/Deployment and Management Service.md %})**
 - **[Email Services]({{ site.baseurl }}{% link Cloud Services and Platforms/Services/Email Service.md %})**
 - **[Storage Services]({{ site.baseurl }}{% link Cloud Services and Platforms/Services/Storage Service.md %})**
+
 ### 4. Management of Cloud Resources
 
 This part I have honestly no idea what to do, read at your own risk or contribute material if you get any. You guys are just leeching off this, its not possible for me to arrange everything on my own, help is highly appreciated...[read more]({{ site.baseurl }}{% link Management of Cloud Resources.md %})
