@@ -10,7 +10,27 @@ EC2 enables businesses to run applications without the need for physical hardwar
 
 ---
 
-#### 2. **Explain the different instance types available in EC2. How do users select the appropriate instance based on their application requirements?**
+#### 2. What are the different pricing models available for Amazon EC2, and how do they work?
+
+Amazon EC2 offers several pricing models to accommodate different workload types and budget considerations:
+
+- **On-Demand Instances:**
+    
+    - Pay for compute capacity by the hour or second with no long-term commitment.
+    - Best for short-term, unpredictable workloads or development and testing environments.
+- **Reserved Instances (RIs):**
+    
+    - Offer significant discounts (up to 75%) compared to On-Demand pricing.
+			    - Require a one-year or three-year commitment.
+    - Suitable for steady-state workloads such as web applications or databases.
+- **Spot Instances:**
+    
+    - Allow users to bid for unused EC2 capacity at discounted rates (up to 90% off On-Demand prices).
+    - Ideal for fault-tolerant, flexible, and time-insensitive workloads such as batch processing and big data analysis.
+
+---
+
+#### 3. **Explain the different instance types available in EC2. How do users select the appropriate instance based on their application requirements?**
 
 AWS EC2 offers several **instance types** tailored for different workloads. Instance types differ based on compute power, memory, storage, and networking performance. The key instance families are:
 
@@ -24,7 +44,7 @@ To select the appropriate instance, users should evaluate their application requ
 
 ---
 
-#### 3. **What is the process for launching and managing EC2 instances, and how can auto-scaling help in managing fluctuating workloads?**
+#### 4. **What is the process for launching and managing EC2 instances, and how can auto-scaling help in managing fluctuating workloads?**
 
 The process of **launching and managing EC2 instances** involves the following steps:
 
@@ -38,7 +58,7 @@ The process of **launching and managing EC2 instances** involves the following s
 
 ---
 
-#### 4. **How does AWS EC2 integrate with other AWS services (e.g., VPC, S3, RDS) to form a complete cloud solution?**
+#### 5. **How does AWS EC2 integrate with other AWS services (e.g., VPC, S3, RDS) to form a complete cloud solution?**
 
 AWS EC2 integrates seamlessly with other AWS services to provide a complete cloud solution:
 
@@ -52,7 +72,7 @@ These integrations enable users to build comprehensive cloud architectures for d
 
 ---
 
-#### 4. **What are the security features offered by AWS EC2, and how can users ensure the safety of their instances and data?**
+#### 6. **What are the security features offered by AWS EC2, and how can users ensure the safety of their instances and data?**
 
 AWS EC2 offers a variety of **security features** to protect instances and data:
 

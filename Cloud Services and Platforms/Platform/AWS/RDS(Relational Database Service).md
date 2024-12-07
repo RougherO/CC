@@ -1,6 +1,6 @@
 #### 1. **What is AWS RDS, and how does it simplify the management of relational databases in the cloud?**
 
-AWS **RDS** (Relational Database Service) is a fully managed service for relational databases, supporting engines like MySQL, PostgreSQL, MariaDB, Oracle, and SQL Server. It simplifies database management by automating administrative tasks such as:
+AWS **RDS** (Relational Database Service) is a fully managed web service for relational databases, supporting engines like MySQL, PostgreSQL, MariaDB, Oracle, and SQL Server. It simplifies database management by automating administrative tasks such as:
 
 - **Provisioning**: Easily create, configure, and deploy databases with a few clicks.
 - **Backup**: Automatic backups are taken and retained for a user-defined period.

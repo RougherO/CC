@@ -21,11 +21,12 @@
 
 #### Platform
 
-- **AWS**
+- **[AWS]({{ site.baseurl }}{% link Cloud Services and Platforms/Platform/AWS.md %})**
     - [EC2]({{ site.baseurl }}{% link Cloud Services and Platforms/Platform/AWS/EC2 (Elastic Compute Cloud).md %})
     - [RDS]({{ site.baseurl }}{% link Cloud Services and Platforms/Platform/AWS/RDS(Relational Database Service).md %})
     - [S3]({{ site.baseurl }}{% link Cloud Services and Platforms/Platform/AWS/S3 (Simple Storage Service).md %})
     - [SimpleDB]({{ site.baseurl }}{% link Cloud Services and Platforms/Platform/AWS/SimpleDB.md %})
+    - [DynamoDB]({{ site.baseurl }}{% link Cloud Services and Platforms/Platform/AWS/DynamoDB.md %})
 - **[OpenStack]({{ site.baseurl }}{% link Cloud Services and Platforms/Platform/OpenStack.md %})**
 
 #### Services

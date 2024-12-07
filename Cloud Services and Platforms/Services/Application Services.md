@@ -1,4 +1,4 @@
-**1. What are application services in the cloud, and how do they simplify the deployment and management of applications?**  
+#### **1. What are application services in the cloud, and how do they simplify the deployment and management of applications?**  
 
 Application services in the cloud are managed platforms that provide the tools and infrastructure developers need to build, deploy, and manage applications without handling the underlying hardware or complex configurations. They simplify the process by offering:
 
@@ -10,7 +10,7 @@ Application services in the cloud are managed platforms that provide the tools a
 
 ---
 
-**2. What are the benefits of using cloud platforms for application hosting over traditional methods?**  
+#### **2. What are the benefits of using cloud platforms for application hosting over traditional methods?**  
 
 Using cloud platforms for application hosting offers several advantages over traditional on-premises hosting:
 

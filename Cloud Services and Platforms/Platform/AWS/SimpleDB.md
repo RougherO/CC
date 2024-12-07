@@ -18,15 +18,7 @@ It is preferred over DynamoDB or RDS when simplicity and low-cost operation are 
 
 ---
 
-#### 3. **How does AWS SimpleDB handle scalability and performance, especially for applications that require flexible, schema-less data storage?**
-
-AWS SimpleDB is designed to scale automatically as the workload increases, but it is limited in terms of scalability compared to services like DynamoDB. SimpleDB uses a distributed architecture that allows it to handle growing amounts of data, but it has limitations on throughput and indexing, which can impact performance for large datasets or high-velocity applications.
-
-For applications requiring highly scalable, schema-less data storage, AWS **DynamoDB** is typically a better option.
-
----
-
-#### 4. **What are the limitations of AWS SimpleDB in terms of features and scalability, and how do other AWS database services compare in these areas?**
+#### 3. **What are the limitations of AWS SimpleDB in terms of features and scalability, and how do other AWS database services compare in these areas?**
 
 **Limitations of AWS SimpleDB** include:
 
@@ -38,7 +30,7 @@ In comparison, services like DynamoDB provide much better scalability, performan
 
 ---
 
-#### 5. **How does AWS SimpleDB ensure high availability and fault tolerance for applications relying on it for storage?**
+#### 4. **How does AWS SimpleDB ensure high availability and fault tolerance for applications relying on it for storage?**
 
 AWS SimpleDB achieves **high availability** and **fault tolerance** through automatic replication of data across multiple availability zones. This ensures that if one availability zone becomes unavailable, the service continues to function with minimal disruption.
 
